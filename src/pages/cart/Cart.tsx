@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./cart.css";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { cartContext } from "../../context/CartContext";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,6 @@ export default function Cart() {
         context.removeAllCart();
       }
     });
-   
   };
 
   return (
@@ -64,11 +63,22 @@ export default function Cart() {
                       <p className="my-3 fs-6">{product.title.slice(0, 15)}</p>
                       <div className="cartItem-description__rating d-flex justify-content-between px-4 w-100 ">
                         <div>
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
+                          {Array(Math.ceil(product.rating.rate))
+                            .fill("")
+                            .map((item, index) => (
+                              <AiFillStar
+                                key={index}
+                                className="productBox__rate-icon"
+                              />
+                            ))}
+                          {Array(5 - Math.ceil(product.rating.rate))
+                            .fill("")
+                            .map((item, index) => (
+                              <AiOutlineStar
+                                key={index}
+                                className="productBox__rate-icon"
+                              />
+                            ))}
                         </div>
                         <span> {product.price}</span>
                       </div>
