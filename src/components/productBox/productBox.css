@@ -1,0 +1,18 @@
+.productBox__image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+.productBox__content {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.productBox__content:hover {
+  box-shadow: 0px 0px 25px 5px lightgray;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.productBox__btn:hover {
+  background-color: lightblue;
+}
