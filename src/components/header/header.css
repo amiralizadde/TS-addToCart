@@ -1,14 +1,22 @@
-.header__left{
-    text-decoration: none;
-    color:black ;
-    font-size: 25px;
-    font-weight: 600;
-    font-style:italic;
+.header__left {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: italic;
 }
-.header__right-boxItem{
-    text-decoration: none;
-    color: black;
+.header__right-boxItem {
+  text-decoration: none;
+  color: black;
 }
-.header__right{
-    text-decoration: none;
+.header__right {
+  text-decoration: none;
+}
+.header-right__cartNumber {
+  font-size: 12px;
+  position: absolute;
+  padding: 0.2rem;
+  background-color: rgb(198, 198, 198);
+  color: white;
+  border-radius: 50%;
 }

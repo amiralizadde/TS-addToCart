@@ -16,3 +16,6 @@
 .productBox__btn:hover {
   background-color: lightblue;
 }
+.productBox__rate-icon{
+  color: orange !important;
+}
